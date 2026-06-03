@@ -13,8 +13,10 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     int gem = 0;
-    // public TextMeshProUGUI gemText;
-    // public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI gemText;
+    public TextMeshProUGUI gameOverText;
+
+    public TextMeshProUGUI collectGemText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        // gemText.text = "Gems: " + Mathf.FloorToInt(gem).ToString();
+        gemText.text = "Gems: " + Mathf.FloorToInt(gem).ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -79,11 +81,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if (gem == 3)
             {
+                collectGemText.gameObject.SetActive(false);
+                gameOverText.gameObject.SetActive(true);
+                gameOverText.text = "YOU WIN!!!";
                 Debug.Log("YOU WIN!");
+                Time.timeScale = 0f;
             }
             else
             {
-                Debug.Log("Collect the all the GEMS to win");
+                collectGemText.gameObject.SetActive(true);
+                collectGemText.text = "Collect the all the GEMS to win";
+                Debug.Log("Collect the all the GEMS to win"); 
             }
         }        
         if (other.CompareTag("Enemy"))
@@ -97,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
 
 
 }
