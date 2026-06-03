@@ -1,10 +1,10 @@
-### 🏴‍☠️ PirateJump
+### 🏴‍☠️ PirateJump 🏴‍☠️
 
 A charming 2D platformer built with **Unity** where you take on the role of a daring pirate on a quest for legendary treasure. Avoid hazards, perfect your jumps, and claim your pirate glory!
 
 ---
 
-## 🎮 Game Objective
+## Game Objective
 
 The rules of the sea are simple but challenging:
 1. **Explore** the treacherous island layout.
@@ -15,7 +15,7 @@ The rules of the sea are simple but challenging:
 
 ---
 
-## 🕹️ Controls
+## Controls
 
 Set sail with these simple, responsive controls designed for precise platforming:
 
