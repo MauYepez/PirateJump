@@ -1,6 +1,4 @@
-import os
-
-readme_content = """# 🏴‍☠️ PirateJump
+🏴‍☠️ PirateJump
 
 A charming 2D platformer built with **Unity** where you take on the role of a daring pirate on a quest for legendary treasure. Avoid hazards, perfect your jumps, and claim your pirate glory!
 
